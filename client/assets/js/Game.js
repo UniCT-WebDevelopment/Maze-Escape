@@ -5,22 +5,6 @@ import Survivor from './Survivor.js';
 import Monster from './Monster.js';
 import Maze, { Cell } from './Maze.js';
 
-/*
-
-EXTRAS:
-
-- Creare la box e la mesh corrispondenti ai portali
-- Impostare un numero limitato di portali che permettano al sopravvissuto di settare la propria 
-posizione in un punto casuale della mappa una volta che la sua BB tocca la BB dei portali
-- Inserire una musica inquietante di sottofondo, che non interferisca però con i suoni dei passi
-del sopravvissuto e del mostro
-- Fare in modo che quando il mostro colpisce il sopravvissuto, si avvii un'animazione apposita
-che lo faccia stare fermo per qualche secondo in modo da dare il tempo al sopravvissuto di
-allungare le distanze
-- Evitare che la telecamera entri dentro le mura
-
-*/
-
 const SERVER = 'http://' + window.location.hostname + ':' + window.location.port;
 let debug = false;
 
