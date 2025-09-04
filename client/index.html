@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Escape</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="startScreen">
+        <div class="titleContainer">
+            <div class="title">
+                <div class="titleBorder">
+                    <div class="titleText">Maze Escape</div>
+                </div>
+            </div>
+        </div>
+        <div class="startOptionsContainer">
+            <div class="gameRules">
+                <div class="rules">
+                    <div class="rule"><b>Welcome to Maze Escape!</b></div>
+                    <div class="rule">
+                        This game is a multiplayer survival horror in which
+                        one player controls a survivor and another player controls the 
+                        maze's Entity. 
+                        <br>
+                        <b>The rules are as follows</b>
+                    </div>
+                    <div class="rule">---------------</div>
+                    <div class="rule" style="color:blue;">Survivor:</div>
+                    <div class="rule">
+                        You'll have to find and press three pressure plates
+                        to activate the black portal, escape the maze, and 
+                        access the secret treasure room.
+                        <br>
+                        <b>Be careful</b>: The Entity lurks within the maze.
+                        If it hits you three times, it's game over.
+                        <br>
+                        <b>Controls:</b>
+                        <br>
+                        <b>W</b> to walk forward;
+                        <br>
+                        <b>A</b> to turn left;
+                        <br>
+                        <b>S</b> to walk backward;
+                        <br>
+                        <b>D</b> to turn right;
+                        <br>
+                        <b>CTRL</b> to crouch.
+                    </div>
+                    <div class="rule">---------------</div>
+                    <div class="rule" style="color:red;">Entity:</div>
+                    <div class="rule">
+                        You're the guardian of the maze.
+                        <br>
+                        Your objective is to kill every intruder you find
+                        to protect the maze's secret treasure.
+                        <br>
+                        You'll only need <b>three hits</b> to kill someone, but be fast
+                        or the treasure could be stolen.
+                        <br>
+                        <b>To hit the survivor, all you have to do is touch him.</b>
+                        <br>
+                        <b>Controls:</b>
+                        <br>
+                        <b>W</b> to walk forward;
+                        <br>
+                        <b>A</b> to turn left;
+                        <br>
+                        <b>S</b> to walk backward;
+                        <br>
+                        <b>D</b> to turn right;
+                        <br>
+                        <b>SPACE</b> to punch.
+                    </div>
+                    <div class="rule">---------------</div>
+                    <div class="rule">
+                        After you set a username, you'll be able to either play with a 
+                        friend by sending a game request, or with a casual player
+                        by starting an online matchmaking session.
+                        <br> 
+                        Every game will be unique, thanks to the random generation of 
+                        the maze and the random placement of objects within it.
+                        <br>
+                        For example, <b>pressure plates can spawn anywhere in the maze, 
+                        but the exit will only appear on the borders after the survivor 
+                        presses three pressure plates.</b>
+                    </div>
+                    <div class="rule">---------------</div>
+                    <div class="rule">
+                        I hope you'll have fun playing my game. 
+                        <br>
+                        <b>Enjoy!</b>
+                    </div>
+                </div>
+            </div>
+            <div class="startOptions">
+                <div class="userMode">
+                    <div class="setUsername">
+                        <input class="username" type="text" placeholder="Username" spellcheck="false" />
+                        <button class="setButt">Set</button>
+                        <button class="disabledButt">Reset</button>
+                    </div>
+                    <div class="chooseMode">
+                        <button class="friendButt">Play with a friend</button>
+                        <button class="onlineButt">Play online</button>
+                    </div>
+                    <div class="inviteFriend">
+                        <div class="text">Invite a friend or wait to be invited:</div>
+                        <input class="friendUsername" type="text" placeholder="Friend's Username" spellcheck="false" />
+                        <button class="sendButt">Send</button>
+                    </div>
+                </div>
+                <div class="characterStart">
+                    <div class="text">Choose a character:</div>
+                    <div class="chooseChar">
+                        <button class="survButt"></button>
+                        <button class="entityButt"></button>
+                    </div>
+                    <div class="start">
+                        <button class="startButt">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="logContainer">
+            <button class="openLogButt">Open Log</button>
+            <div class="log">
+                <div class="topBar">
+                    <div class="logName">Log</div>
+                    <button class="hideButt">Hide</button>
+                </div>
+                <div class="logBody"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gameScreen">
+        <div class="lifeBar">
+            <div class="green"></div>
+        </div>
+        <div class="pressurePlates">Pressed plates: 0/3</div>
+    </div>
+    <div class="win">
+        <div class="winText">You Win!</div>
+        <button class="exit">Back to main menu</button>
+    </div>
+    <div class="lost">
+        <div class="loseText">You Lose!</div>
+        <button class="exit">Back to main menu</button>
+    </div>
+
+    <script type="module" src="assets/js/main.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</body>
+
+</html>

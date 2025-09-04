@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "target": "ES2022",
+        "jsx": "react-jsx",
+        "allowImportingTsExtensions": true,
+        "strictNullChecks": true,
+        "strictFunctionTypes": true,
+        "allowJs": true,
+        "checkJs": false,
+        "paths": {
+            "cannon-es": ["./libs/cannon-es/cannon-es.js"]
+        }
+    },
+    "include": [
+        "**/*.js",
+        "**/*.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
